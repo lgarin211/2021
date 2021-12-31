@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="theme_switchable">
+<head>
+  <meta charset="UTF-8">
+  <title>Agustinus Pardaeman Lumban Tobing</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+<link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+<link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<div class="options" id="all">
+   
+   
+</div>
+
+<a href="https://lgarin211.github.io" target="_blank" class="credit">Catatan Ku Untuk 2-21</a>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<!-- <script src='https://codepen.io/z-/pen/a8e37caf2a04602ea5815e5acedab458.js'></script> -->
+<script  src="./script.js"></script>
+<script>
+   var vlas=`
+   <div id='lin1' class="option active" style="--optionBackground:url(./blam.jpeg);" onclick="bin('lin1')">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-walking"></i>
+         </div>
+         <div class="info">
+            <div class="main">Catatanku</div>
+            <div class="sub">2021</div>
+         </div>
+      </div>
+   </div>
+   `
+
+   var balm=''
+    var van=[
+              ['Tahunku dengan PKL','./bus/ren1.jpeg','Memulai Semuanya dengan Prestasi di LKS tingkat Jabar Cloud Computing'],
+              ['Presentasi Di BTN','./bus/ren7.jpeg','lagus_tinustobing'],
+              ['Laporan PKL','./bus/ren8.jpeg','lagus_tinustobing'],
+              ['Basket Skuy','./bus/ren9.jpeg','lagus_tinustobing'],
+              ['Terbang To Makasar','./bus/ren10.jpeg','lagus_tinustobing'],
+              ['Jalan2k Losari','./bus/ren11.jpeg','lagus_tinustobing'],
+              ['Pameran','./bus/ren12.jpeg','lagus_tinustobing'],
+              ['Pisang Epe','./bus/ren13.jpeg','lagus_tinustobing'],
+
+            ]
+
+    for (let i = 0; i < van.length; i++) {
+      bal=van[i]
+      balm=balm+`<div id='lin`+(i+12)+`' class="option" style="--optionBackground:url(`+bal[1]+`);" onclick="bin('lin`+(i+12)+`')">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-walking"></i>
+         </div>
+         <div class="info">
+            <div class="main">`+bal[0]+`</div>
+            <div class="sub">`+bal[2]+`</div>
+         </div>
+      </div>
+   </div>`
+
+   //    balm=balm+`
+   //  <div class="col-lg-4 col-md-6 portfolio-item `+bal[2]+`">
+   //    <div class="portfolio-wrap">
+   //      <img src="`+bal[1]+`" class="img-fluid" alt="">
+   //      <div class="portfolio-info">
+   //        <h4>`+bal[0]+`</h4>
+   //        <p>`+bal[3]+`</p>
+   //        <div class="portfolio-links">
+   //          <a href="`+bal[1]+`" data-gallery="portfolioGallery" class="portfolio-lightbox" title="`+i+`"><i class="bx bx-plus"></i></a>
+   //        </div>
+   //      </div>
+   //    </div>
+   //  </div>`            
+    }
+    // console.log(balm)
+
+   //  document.getElementById('portfolio-counter').innerHTML=document.getElementById('portfolio-counter').innerHTML+balm
+
+
+
+   document.getElementById('all').innerHTML=vlas
+   document.getElementById('all').innerHTML=document.getElementById('all').innerHTML+balm
+
+   function bin(id) {
+     document.getElementsByClassName('active')[0].classList.toggle('active') 
+     document.getElementById(id).classList.toggle('active') 
+   }
+</script>
+</body>
+</html>
